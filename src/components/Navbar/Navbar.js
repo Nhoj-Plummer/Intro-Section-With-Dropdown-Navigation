@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import "./navbar.css"
 import Logo from "../../assets/logo.svg"
+import Menu1 from "../../assets/icon-menu.svg"
+import Menu2 from "../../assets/icon-close-menu.svg"
 
 const Menu = () => (
   <>
@@ -40,6 +42,11 @@ const Navbar = () => {
       </div>
 
       {/* Mobile */}
+      <div className="navbar-mobile-container">
+        <div className="navbar-mobile-toggle">
+          <img src={Menu1} alt="toggle" />
+        </div>
+      </div>
     </div>
   )
 }

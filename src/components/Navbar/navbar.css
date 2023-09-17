@@ -3,12 +3,13 @@
   font-family: var(--font-family);
   height: 4rem;
   padding: 20px;
+  justify-content: space-between;
   border: 1px solid;
 }
 
 .navbar-desktop-container {
   flex: 1;
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   margin-left: 3.125rem;
   border: 1px solid;
@@ -33,4 +34,7 @@
 
 /* Desktop Rules */
 @media screen and (min-width: 540px) {
+  .navbar-mobile-container {
+    display: none;
+  }
 }
