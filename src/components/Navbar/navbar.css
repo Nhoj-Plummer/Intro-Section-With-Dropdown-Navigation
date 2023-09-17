@@ -22,3 +22,15 @@
 .navbar-desktop-login {
   border: 1px solid;
 }
+
+/* Conditional Section */
+/* Mobile Rules */
+@media screen and (max-width: 540px) {
+  .navbar-desktop-container {
+    display: none;
+  }
+}
+
+/* Desktop Rules */
+@media screen and (min-width: 540px) {
+}
