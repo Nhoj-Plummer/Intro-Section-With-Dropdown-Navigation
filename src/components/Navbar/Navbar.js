@@ -22,7 +22,7 @@ const Menu = () => (
 )
 
 const Navbar = () => {
-  // const [toggleMenu, setToggleMenu] = useState(true)
+  const [toggleMenu, setToggleMenu] = useState(true)
 
   return (
     <div className="navbar-container">
@@ -43,16 +43,16 @@ const Navbar = () => {
 
       {/* Mobile */}
       <div className="navbar-mobile-container">
-        <div className="navbar-mobile-toggle">
-          <img src={Menu1} alt="toggle" />
-        </div>
-        <div className="navbar-mobile_menu">
-          <Menu />
-          <div className="navbar-mobile-login">
-            <a href="#login">Login</a>
-            <a href="#register">Register</a>
+        <div className="navbar-mobile-toggle">{toggleMenu ? <img src={Menu1} alt="off" onClick={() => setToggleMenu(false)} /> : <img src={Menu2} alt="on" onClick={() => setToggleMenu(true)} />}</div>
+        {!toggleMenu && (
+          <div className="navbar-mobile_menu">
+            <Menu />
+            <div className="navbar-mobile_login">
+              <a href="#login">Login</a>
+              <a href="#register">Register</a>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   )

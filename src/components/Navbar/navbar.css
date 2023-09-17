@@ -26,6 +26,12 @@
   border: 1px solid;
 }
 
+/* Mobile CSS */
+.navbar-mobile-toggle {
+  position: relative;
+  z-index: 1000;
+}
+
 .navbar-mobile_menu {
   display: flex;
   flex-direction: column;
@@ -38,7 +44,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 4;
+  z-index: 0;
   border: 1px solid;
 }
 
