@@ -32,6 +32,7 @@ const Navbar = () => {
         <div className="navbar-desktop-menu">
           <Menu />
         </div>
+
         <div className="navbar-desktop-login">
           <a href="#login">Login</a>
           <a href="#register">Register</a>

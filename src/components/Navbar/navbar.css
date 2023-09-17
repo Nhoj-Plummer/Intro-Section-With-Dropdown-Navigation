@@ -1,21 +1,24 @@
 .navbar-container {
   display: flex;
-  align-items: center;
+  font-family: var(--font-family);
   height: 4rem;
   padding: 20px;
   border: 1px solid;
 }
 
 .navbar-desktop-container {
+  flex: 1;
+  display: inline-flex;
+  justify-content: space-between;
+  margin-left: 3.125rem;
   border: 1px solid;
 }
 
 .navbar-desktop-menu {
   display: flex;
-  justify-content: space-between;
   border: 1px solid;
 }
 
-.navbar-desktop-login{
+.navbar-desktop-login {
   border: 1px solid;
 }
