@@ -8,9 +8,7 @@ import ArrowDown from "../../assets/icon-arrow-down.svg"
 
 const Menu = ({ toggleSectionMenu, setToggleSectionMenu }) => (
   <>
-    <p>
-      <a href="#features"> Features </a> {toggleSectionMenu ? <img src={ArrowUp} alt="off" onClick={() => setToggleSectionMenu(false)} /> : <img src={ArrowDown} alt="on" onClick={() => setToggleSectionMenu(true)} />}
-    </p>
+    <p>{/* <a href="#features"> Features </a> {toggleSectionMenu ? <img src={ArrowUp} alt="off" onMouseOver={() => setToggleSectionMenu(false)} /> : <img src={ArrowDown} alt="on" onMouseOver={() => setToggleSectionMenu(true)} />} */}</p>
     <p>
       <a href="#company">Company</a>
     </p>
