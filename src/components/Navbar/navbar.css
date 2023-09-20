@@ -1,11 +1,19 @@
+/* General CSS */
 .navbar-container {
   display: flex;
   font-family: var(--font-family);
+  font-size: 18px;
   height: 4rem;
   padding: 20px;
   justify-content: space-between;
   border: 1px solid;
 }
+
+.navbar-container a {
+  text-decoration: none;
+  color: var(--medium-gray);
+}
+
 
 .navbar-desktop-container {
   flex: 1;
@@ -45,6 +53,16 @@
   top: 0;
   right: 0;
   z-index: 0;
+  border: 1px solid;
+}
+
+.navbar-mobile_menu p {
+  margin-bottom: 1.5rem;
+}
+
+.navbar-mobile_login {
+  display: flex;
+  flex-direction: column;
   border: 1px solid;
 }
 

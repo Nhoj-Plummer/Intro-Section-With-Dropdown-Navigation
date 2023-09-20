@@ -3,11 +3,13 @@ import "./navbar.css"
 import Logo from "../../assets/logo.svg"
 import Menu1 from "../../assets/icon-menu.svg"
 import Menu2 from "../../assets/icon-close-menu.svg"
+import ArrowUp from "../../assets/icon-arrow-up.svg"
+import ArrowDown from "../../assets/icon-arrow-down.svg"
 
-const Menu = () => (
+const Menu = ({ toggleSectionMenu, setToggleSectionMenu }) => (
   <>
     <p>
-      <a href="#features"> Features</a>
+      <a href="#features"> Features </a> {toggleSectionMenu ? <img src={ArrowUp} alt="off" onClick={() => setToggleSectionMenu(false)} /> : <img src={ArrowDown} alt="on" onClick={() => setToggleSectionMenu(true)} />}
     </p>
     <p>
       <a href="#company">Company</a>
@@ -23,6 +25,11 @@ const Menu = () => (
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(true)
+  const [toggleSectionMenu, setToggleSectionMenu] = useState(true)
+
+  // const handleOpen = () => {
+  //   setToggleSectionMenu(!toggleSectionMenu)
+  // }
 
   return (
     <div className="navbar-container">
@@ -46,7 +53,7 @@ const Navbar = () => {
         <div className="navbar-mobile-toggle">{toggleMenu ? <img src={Menu1} alt="off" onClick={() => setToggleMenu(false)} /> : <img src={Menu2} alt="on" onClick={() => setToggleMenu(true)} />}</div>
         {!toggleMenu && (
           <div className="navbar-mobile_menu">
-            <Menu />
+            <Menu toggleSectionMenu={toggleSectionMenu} setToggleSectionMenu={setToggleSectionMenu} />
             <div className="navbar-mobile_login">
               <a href="#login">Login</a>
               <a href="#register">Register</a>
