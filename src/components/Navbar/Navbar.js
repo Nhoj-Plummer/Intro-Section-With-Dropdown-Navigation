@@ -6,9 +6,11 @@ import Menu2 from "../../assets/icon-close-menu.svg"
 import ArrowUp from "../../assets/icon-arrow-up.svg"
 import ArrowDown from "../../assets/icon-arrow-down.svg"
 
-const Menu = ({ toggleSectionMenu, setToggleSectionMenu }) => (
+const Menu = ({ toggleSectionMenu, handleOpen }) => (
   <>
-    <p>{/* <a href="#features"> Features </a> {toggleSectionMenu ? <img src={ArrowUp} alt="off" onMouseOver={() => setToggleSectionMenu(false)} /> : <img src={ArrowDown} alt="on" onMouseOver={() => setToggleSectionMenu(true)} />} */}</p>
+    <p>
+     {toggleSectionMenu ?  <a href="#features" onClick={handleOpen}> Features  <img src={ArrowUp} alt="off"  /> </a> : <a href="#features" onClick={handleOpen}> Features  <img src={ArrowDown} alt="off" /> </a>}
+    </p>
     <p>
       <a href="#company">Company</a>
     </p>
@@ -25,9 +27,11 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(true)
   const [toggleSectionMenu, setToggleSectionMenu] = useState(true)
 
-  // const handleOpen = () => {
-  //   setToggleSectionMenu(!toggleSectionMenu)
-  // }
+  const handleOpen = e => {
+    e.preventDefault()
+    setToggleSectionMenu(!toggleSectionMenu)
+    console.log("Function Called", toggleSectionMenu)
+  }
 
   return (
     <div className="navbar-container">
@@ -37,7 +41,7 @@ const Navbar = () => {
       {/* Desktop */}
       <div className="navbar-desktop-container">
         <div className="navbar-desktop-menu">
-          <Menu />
+          <Menu handleOpen={handleOpen} toggleSectionMenu={toggleSectionMenu} />
         </div>
 
         <div className="navbar-desktop-login">
@@ -51,7 +55,7 @@ const Navbar = () => {
         <div className="navbar-mobile-toggle">{toggleMenu ? <img src={Menu1} alt="off" onClick={() => setToggleMenu(false)} /> : <img src={Menu2} alt="on" onClick={() => setToggleMenu(true)} />}</div>
         {!toggleMenu && (
           <div className="navbar-mobile_menu">
-            <Menu toggleSectionMenu={toggleSectionMenu} setToggleSectionMenu={setToggleSectionMenu} />
+            <Menu handleOpen={handleOpen} toggleSectionMenu={toggleSectionMenu} />
             <div className="navbar-mobile_login">
               <a href="#login">Login</a>
               <a href="#register">Register</a>
