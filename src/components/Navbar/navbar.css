@@ -17,7 +17,22 @@
 .navbar-feature-subsection {
   display: flex;
   flex-direction: column;
+  
   border: 1px solid;
+}
+
+.navbar-feature-subsection a {
+width: 200px;
+ max-height: 100%;
+border: 1px solid;
+}
+
+.navbar-feature-subsection img {
+  border: 1px solid;
+ vertical-align: middle;
+
+  margin: 5px;
+  object-fit: contain;
 }
 
 /* Desktop CSS*/
@@ -62,9 +77,7 @@
   border: 1px solid;
 }
 
-.navbar-mobile_menu p {
-  margin-bottom: 1.5rem;
-}
+
 
 .navbar-mobile_login {
   display: flex;

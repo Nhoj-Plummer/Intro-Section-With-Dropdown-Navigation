@@ -1,27 +1,33 @@
 import React, {useState} from "react"
 import "./navbar.css"
-import {Logo, MenuIcon, MenuCloseIcon, ArrowUp, ArrowDown, TodoList, Calender} from "../../assets/assestindex"
+import {Logo, MenuIcon, MenuCloseIcon, ArrowUp, ArrowDown, TodoList, Calender, Reminder, Planning} from "../../assets/assestindex"
 
 const Menu = ({toggleSectionMenu, handleOpen}) => (
   <>
     <p>
       {toggleSectionMenu ? (
         <a href="#features" onClick={handleOpen}>
-          Features <img src={ArrowUp} alt="off" />
+          Features <img src={ArrowDown} alt="off" />
         </a>
       ) : (
         <a href="#features" onClick={handleOpen}>
-          Features <img src={ArrowDown} alt="off" />
+          Features <img src={ArrowUp} alt="off" />
         </a>
       )}
     </p>
     {!toggleSectionMenu && (
       <div className="navbar-feature-subsection">
         <a href="#todolist">
-          <img src={TodoList} alt="Icon" /> Todo List
+          <img src={TodoList} alt="Icon" /> <span>Todo List</span>
         </a>
-        <a href="calender">
-          <img src={Calender} alt="Icon" /> Calender
+        <a href="#calender">
+          <img src={Calender} alt="Icon" /> <span>Calender</span>
+        </a>
+        <a href="#reminder">
+          <img src={Reminder} alt="Icon" /> <span>Reminder</span>
+        </a>
+        <a href="#planning">
+          <img src={Planning} alt="Icon" /> <span>Planning</span>
         </a>
       </div>
     )}
