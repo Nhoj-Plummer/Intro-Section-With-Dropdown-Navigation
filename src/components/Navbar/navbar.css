@@ -14,7 +14,13 @@
   color: var(--medium-gray);
 }
 
+.navbar-feature-subsection {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+}
 
+/* Desktop CSS*/
 .navbar-desktop-container {
   flex: 1;
   display: flex;

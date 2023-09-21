@@ -1,8 +1,6 @@
 import React, {useState} from "react"
 import "./navbar.css"
-import {Logo, MenuIcon, MenuCloseIcon} from "../../assets/assestindex"
-import ArrowUp from "../../assets/icon-arrow-up.svg"
-import ArrowDown from "../../assets/icon-arrow-down.svg"
+import {Logo, MenuIcon, MenuCloseIcon, ArrowUp, ArrowDown, TodoList, Calender} from "../../assets/assestindex"
 
 const Menu = ({toggleSectionMenu, handleOpen}) => (
   <>
@@ -20,7 +18,10 @@ const Menu = ({toggleSectionMenu, handleOpen}) => (
     {!toggleSectionMenu && (
       <div className="navbar-feature-subsection">
         <a href="#todolist">
-          <img /> Todo List
+          <img src={TodoList} alt="Icon" /> Todo List
+        </a>
+        <a href="calender">
+          <img src={Calender} alt="Icon" /> Calender
         </a>
       </div>
     )}
@@ -65,7 +66,7 @@ const Navbar = () => {
 
       {/* Mobile */}
       <div className="navbar-mobile-container">
-        <div className="navbar-mobile-toggle">{toggleMenu ? <img src={(MenuIcon, MenuCloseIcon)} alt="off" onClick={() => setToggleMenu(false)} /> : <img src={MenuCloseIcon} alt="on" onClick={() => setToggleMenu(true)} />}</div>
+        <div className="navbar-mobile-toggle">{toggleMenu ? <img src={MenuIcon} alt="off" onClick={() => setToggleMenu(false)} /> : <img src={MenuCloseIcon} alt="on" onClick={() => setToggleMenu(true)} />}</div>
         {!toggleMenu && (
           <div className="navbar-mobile_menu">
             <Menu handleOpen={handleOpen} toggleSectionMenu={toggleSectionMenu} />
