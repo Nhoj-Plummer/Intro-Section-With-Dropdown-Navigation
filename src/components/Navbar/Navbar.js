@@ -1,16 +1,29 @@
-import React, { useState } from "react"
+import React, {useState} from "react"
 import "./navbar.css"
-import Logo from "../../assets/logo.svg"
-import Menu1 from "../../assets/icon-menu.svg"
-import Menu2 from "../../assets/icon-close-menu.svg"
+import {Logo, MenuIcon, MenuCloseIcon} from "../../assets/assestindex"
 import ArrowUp from "../../assets/icon-arrow-up.svg"
 import ArrowDown from "../../assets/icon-arrow-down.svg"
 
-const Menu = ({ toggleSectionMenu, handleOpen }) => (
+const Menu = ({toggleSectionMenu, handleOpen}) => (
   <>
     <p>
-     {toggleSectionMenu ?  <a href="#features" onClick={handleOpen}> Features  <img src={ArrowUp} alt="off"  /> </a> : <a href="#features" onClick={handleOpen}> Features  <img src={ArrowDown} alt="off" /> </a>}
+      {toggleSectionMenu ? (
+        <a href="#features" onClick={handleOpen}>
+          Features <img src={ArrowUp} alt="off" />
+        </a>
+      ) : (
+        <a href="#features" onClick={handleOpen}>
+          Features <img src={ArrowDown} alt="off" />
+        </a>
+      )}
     </p>
+    {!toggleSectionMenu && (
+      <div className="navbar-feature-subsection">
+        <a href="#todolist">
+          <img /> Todo List
+        </a>
+      </div>
+    )}
     <p>
       <a href="#company">Company</a>
     </p>
@@ -52,7 +65,7 @@ const Navbar = () => {
 
       {/* Mobile */}
       <div className="navbar-mobile-container">
-        <div className="navbar-mobile-toggle">{toggleMenu ? <img src={Menu1} alt="off" onClick={() => setToggleMenu(false)} /> : <img src={Menu2} alt="on" onClick={() => setToggleMenu(true)} />}</div>
+        <div className="navbar-mobile-toggle">{toggleMenu ? <img src={(MenuIcon, MenuCloseIcon)} alt="off" onClick={() => setToggleMenu(false)} /> : <img src={MenuCloseIcon} alt="on" onClick={() => setToggleMenu(true)} />}</div>
         {!toggleMenu && (
           <div className="navbar-mobile_menu">
             <Menu handleOpen={handleOpen} toggleSectionMenu={toggleSectionMenu} />

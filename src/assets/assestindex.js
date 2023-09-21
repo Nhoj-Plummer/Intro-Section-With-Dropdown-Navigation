@@ -1,3 +1,5 @@
-export { default as Logo } from "../assets/logo.svg"
-export { default as MenuIcon } from "../assets/icon-menu.svg"
-export { default as MenuCloseIcon } from "../assets/icon-close-menu.svg"
+export {default as Logo} from "../assets/logo.svg"
+export {default as MenuIcon} from "../assets/icon-menu.svg"
+export {default as MenuCloseIcon} from "../assets/icon-close-menu.svg"
+export {default as ArrowUp} from "../assets/icon-arrow-up.svg"
+export {default as ArrowDown} from "../assets/icon-arrow-down.svg"
