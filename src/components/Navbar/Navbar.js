@@ -23,8 +23,8 @@ const Menu = ({toggleSectionMenu, handleOpen}) => (
         <a href="#calender">
           <img src={Calender} alt="Icon" /> <span>Calender</span>
         </a>
-        <a href="#reminder">
-          <img src={Reminder} alt="Icon" /> <span>Reminder</span>
+        <a href="#reminders">
+          <img src={Reminder} alt="Icon" /> <span>Reminders</span>
         </a>
         <a href="#planning">
           <img src={Planning} alt="Icon" /> <span>Planning</span>
