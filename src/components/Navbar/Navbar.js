@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import "./navbar.css"
 import {Logo, MenuIcon, MenuCloseIcon, ArrowUp, ArrowDown, TodoList, Calender, Reminder, Planning} from "../../assets/assestindex"
 
-const Menu = ({toggleSectionMenu, handleOpen}) => (
+const Menu = ({toggleSectionMenu, handleOpen, toggleSectionMenu2, handleOpen2}) => (
   <>
     <p>
       {toggleSectionMenu ? (
@@ -32,7 +32,15 @@ const Menu = ({toggleSectionMenu, handleOpen}) => (
       </div>
     )}
     <p>
-      <a href="#company">Company</a>
+      {toggleSectionMenu2 ? (
+        <a href="#company" onClick={handleOpen2}>
+          Company <img src={ArrowDown} alt="off" />
+        </a>
+      ) : (
+        <a href="#company" onClick={handleOpen2}>
+          Company <img src={ArrowUp} alt="off" />
+        </a>
+      )}
     </p>
     <p>
       <a href="#careers">Careers</a>
@@ -46,11 +54,18 @@ const Menu = ({toggleSectionMenu, handleOpen}) => (
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(true)
   const [toggleSectionMenu, setToggleSectionMenu] = useState(true)
+  const [toggleSectionMenu2, setToggleSectionMenu2] = useState(true)
 
   const handleOpen = e => {
     e.preventDefault()
     setToggleSectionMenu(!toggleSectionMenu)
     console.log("Function Called", toggleSectionMenu)
+  }
+
+  const handleOpen2 = e => {
+    e.preventDefault()
+    setToggleSectionMenu2(!toggleSectionMenu2)
+    console.log("Function Called 2", toggleSectionMenu2)
   }
 
   return (
@@ -75,7 +90,7 @@ const Navbar = () => {
         <div className="navbar-mobile-toggle">{toggleMenu ? <img src={MenuIcon} alt="off" onClick={() => setToggleMenu(false)} /> : <img src={MenuCloseIcon} alt="on" onClick={() => setToggleMenu(true)} />}</div>
         {!toggleMenu && (
           <div className="navbar-mobile_menu">
-            <Menu handleOpen={handleOpen} toggleSectionMenu={toggleSectionMenu} />
+            <Menu handleOpen={handleOpen} toggleSectionMenu={toggleSectionMenu} handleOpen2={handleOpen2} toggleSectionMenu2={toggleSectionMenu2} />
             <div className="navbar-mobile_login">
               <a href="#login">Login</a>
               <a href="#register">Register</a>
