@@ -9,7 +9,6 @@
   border: 1px solid;
 }
 
-
 .navbar-container a {
   text-decoration: none;
   color: var(--medium-gray);
@@ -35,7 +34,6 @@
   vertical-align: middle;
   margin-right: 10px;
 }
-
 
 /* Desktop CSS*/
 .navbar-desktop-container {
@@ -82,7 +80,20 @@
 .navbar-mobile_login {
   display: flex;
   flex-direction: column;
-  border: 1px solid;
+  margin-top: 1rem;
+  height: 80px;
+}
+
+.navbar-mobile_login a {
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.navbar-mobile_login a:nth-child(2) {
+  border-radius: 15px;
+  border: 2px solid;
 }
 
 /* Conditional Section */
