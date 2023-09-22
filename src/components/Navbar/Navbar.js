@@ -86,7 +86,7 @@ const Navbar = () => {
           <Menu handleOpen={handleOpen} toggleSectionMenu={toggleSectionMenu} />
         </div>
 
-        <div className="navbar-desktop-login">
+        <div className="navbar-login">
           <a href="#login">Login</a>
           <a href="#register">Register</a>
         </div>
@@ -98,7 +98,7 @@ const Navbar = () => {
         {!toggleMenu && (
           <div className="navbar-mobile_menu">
             <Menu handleOpen={handleOpen} toggleSectionMenu={toggleSectionMenu} handleOpen2={handleOpen2} toggleSectionMenu2={toggleSectionMenu2} />
-            <div className="navbar-mobile_login">
+            <div className="navbar-login">
               <a href="#login">Login</a>
               <a href="#register">Register</a>
             </div>
