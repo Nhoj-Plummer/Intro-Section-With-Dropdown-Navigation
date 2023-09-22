@@ -11,7 +11,7 @@ const Menu = ({toggleSectionMenu, handleOpen, toggleSectionMenu2, handleOpen2}) 
         </a>
       ) : (
         <a href="#features" onClick={handleOpen}>
-          Features <img src={ArrowUp} alt="off" />
+          Features <img src={ArrowUp} alt="on" />
         </a>
       )}
     </p>
@@ -83,10 +83,10 @@ const Navbar = () => {
       {/* Desktop */}
       <div className="navbar-desktop-container">
         <div className="navbar-desktop-menu">
-          <Menu handleOpen={handleOpen} toggleSectionMenu={toggleSectionMenu} />
+          <Menu handleOpen={handleOpen} toggleSectionMenu={toggleSectionMenu} handleOpen2={handleOpen2} toggleSectionMenu2={toggleSectionMenu2}/>
         </div>
 
-        <div className="navbar-login">
+        <div className="navbar-desktop-login">
           <a href="#login">Login</a>
           <a href="#register">Register</a>
         </div>
@@ -98,7 +98,7 @@ const Navbar = () => {
         {!toggleMenu && (
           <div className="navbar-mobile_menu">
             <Menu handleOpen={handleOpen} toggleSectionMenu={toggleSectionMenu} handleOpen2={handleOpen2} toggleSectionMenu2={toggleSectionMenu2} />
-            <div className="navbar-login">
+            <div className="navbar-mobile_login">
               <a href="#login">Login</a>
               <a href="#register">Register</a>
             </div>

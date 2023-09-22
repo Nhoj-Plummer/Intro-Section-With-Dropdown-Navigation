@@ -36,10 +36,6 @@
   margin-right: 10px;
 }
 
-.navbar-login {
-  display: flex;
-  border: 1px solid;
-}
 
 /* Desktop CSS*/
 .navbar-desktop-container {
@@ -98,10 +94,6 @@
 
   .navbar-container p {
     margin-top: 1rem;
-  }
-
-  .navbar-login {
-    flex-direction: column;
   }
 }
 
