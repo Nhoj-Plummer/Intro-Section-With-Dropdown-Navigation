@@ -42,6 +42,13 @@ const Menu = ({toggleSectionMenu, handleOpen, toggleSectionMenu2, handleOpen2}) 
         </a>
       )}
     </p>
+    {!toggleSectionMenu2 && (
+      <div className="navbar-feature-subsection">
+        <a href="#history">History</a>
+        <a href="#ourteam">Our Team</a>
+        <a href="#blog">Blog</a>
+      </div>
+    )}
     <p>
       <a href="#careers">Careers</a>
     </p>

@@ -10,7 +10,6 @@
 }
 
 
-
 .navbar-container a {
   text-decoration: none;
   color: var(--medium-gray);
@@ -25,19 +24,16 @@
   flex-direction: column;
   margin-left: 20px;
   margin-top: 20px;
-  border: 1px solid;
 }
 
 .navbar-feature-subsection a {
-  max-height: 100%;
-  border: 1px solid;
+  height: 40px;
 }
 
 .navbar-feature-subsection img {
-  border: 1px solid;
   height: 25px;
   vertical-align: middle;
-  margin: 10px;
+  margin-right: 10px;
 }
 
 /* Desktop CSS*/
