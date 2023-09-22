@@ -75,37 +75,44 @@ const Navbar = () => {
     console.log("Function Called 2", toggleSectionMenu2)
   }
 
+  // const handleGreyOut = e => {
+  //   e.preventDefault()
+  // }
+
   return (
-    <div className="navbar-container">
-      <div className="navbar-container_image">
-        <img src={Logo} alt="Logo" />
-      </div>
-      {/* Desktop */}
-      <div className="navbar-desktop-container">
-        <div className="navbar-desktop-menu">
-          <Menu handleOpen={handleOpen} toggleSectionMenu={toggleSectionMenu} handleOpen2={handleOpen2} toggleSectionMenu2={toggleSectionMenu2}/>
+    
+      <div className="navbar-container">
+        {!toggleMenu && (<div className="navbar-greyout"></div>)}
+        <div className="navbar-container_image">
+          <img src={Logo} alt="Logo" />
         </div>
-
-        <div className="navbar-desktop-login">
-          <a href="#login">Login</a>
-          <a href="#register">Register</a>
-        </div>
-      </div>
-
-      {/* Mobile */}
-      <div className="navbar-mobile-container">
-        <div className="navbar-mobile-toggle">{toggleMenu ? <img src={MenuIcon} alt="off" onClick={() => setToggleMenu(false)} /> : <img src={MenuCloseIcon} alt="on" onClick={() => setToggleMenu(true)} />}</div>
-        {!toggleMenu && (
-          <div className="navbar-mobile_menu">
+        {/* Desktop */}
+        <div className="navbar-desktop-container">
+          <div className="navbar-desktop-menu">
             <Menu handleOpen={handleOpen} toggleSectionMenu={toggleSectionMenu} handleOpen2={handleOpen2} toggleSectionMenu2={toggleSectionMenu2} />
-            <div className="navbar-mobile_login">
-              <a href="#login">Login</a>
-              <a href="#register">Register</a>
-            </div>
           </div>
-        )}
+
+          <div className="navbar-desktop-login">
+            <a href="#login">Login</a>
+            <a href="#register">Register</a>
+          </div>
+        </div>
+
+        {/* Mobile */}
+        <div className="navbar-mobile-container">
+          <div className="navbar-mobile-toggle">{toggleMenu ? <img src={MenuIcon} alt="off" onClick={() => setToggleMenu(false)} /> : <img src={MenuCloseIcon} alt="on" onClick={() => setToggleMenu(true)} />}</div>
+          {!toggleMenu && (
+            <div className="navbar-mobile_menu">
+              <Menu handleOpen={handleOpen} toggleSectionMenu={toggleSectionMenu} handleOpen2={handleOpen2} toggleSectionMenu2={toggleSectionMenu2} />
+              <div className="navbar-mobile_login">
+                <a href="#login">Login</a>
+                <a href="#register">Register</a>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+ 
   )
 }
 
