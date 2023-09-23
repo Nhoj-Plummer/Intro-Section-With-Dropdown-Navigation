@@ -2,7 +2,7 @@ import React from "react"
 import "./HeroSection.css"
 import {DesktopImg, MobileImg, Databiz, Audiophile, Meet, Maker} from "../../assets/assestindex"
 
-const BrandItem = brand => {
+const BrandItem = ({brand}) => {
   return (
     <div>
       <img src={brand} alt="brand" />
@@ -28,6 +28,9 @@ const HeroSection = () => {
       </div>
       <div className="hero-section_brands">
         <BrandItem brand={Databiz} />
+        <BrandItem brand={Audiophile} />
+        <BrandItem brand={Meet} />
+        <BrandItem brand={Maker} />
       </div>
     </div>
   )
