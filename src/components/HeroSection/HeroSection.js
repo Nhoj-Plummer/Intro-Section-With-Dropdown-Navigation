@@ -1,6 +1,14 @@
 import React from "react"
 import "./HeroSection.css"
-import {DesktopImg, MobileImg} from "../../assets/assestindex"
+import {DesktopImg, MobileImg, Databiz, Audiophile, Meet, Maker} from "../../assets/assestindex"
+
+const BrandItem = brand => {
+  return (
+    <div>
+      <img src={brand} alt="brand" />
+    </div>
+  )
+}
 
 const HeroSection = () => {
   return (
@@ -18,7 +26,9 @@ const HeroSection = () => {
           <p>Learn More</p>
         </button>
       </div>
-      <div className="hero-section_groups"></div>
+      <div className="hero-section_brands">
+        <BrandItem brand={Databiz} />
+      </div>
     </div>
   )
 }
