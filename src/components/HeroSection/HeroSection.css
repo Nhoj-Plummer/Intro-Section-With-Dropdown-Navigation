@@ -1,5 +1,6 @@
 .hero-section_container {
   display: flex;
+  font-family: var(--font-family);
   border: 1px solid;
 }
 
@@ -9,8 +10,17 @@
   border: 1px solid;
 }
 
-.hero-section_text {
+.hero-section_text,
+.hero-section_text h1,
+.hero-section_text p,
+.hero-section_tex button {
   border: 1px solid;
+}
+
+.hero-section_text p {
+  font-size: 17px;
+  color: var(--medium-gray);
+  font-weight: 500;
 }
 
 .hero-section_brands {
@@ -25,11 +35,27 @@
   object-fit: contain;
 }
 
+.hero-section_text button {
+  width: 130px;
+  height: 40px;
+  background-color: var(--almost-black);
+  color: var(--almost-white);
+  border-radius: 15px;
+  font-family: var(--font-family);
+  font-weight: 500;
+}
+
 /* Conditional Section */
 /* Mobile Rules */
 @media screen and (max-width: 540px) {
   .hero-section_container {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-section_text h1,
+  .hero-section_text p {
+    margin-top: 1.5rem;
   }
 }
 

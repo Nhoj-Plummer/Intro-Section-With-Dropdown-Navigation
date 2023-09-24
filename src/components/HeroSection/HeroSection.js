@@ -21,10 +21,8 @@ const HeroSection = () => {
       </div>
       <div className="hero-section_text">
         <h1>Make remote work</h1>
-        <p>Get your team in sync, no matter your location. Streamline Processes, create team rituals, and watch productivity soar.</p>
-        <button>
-          <p>Learn More</p>
-        </button>
+        <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+        <button>Learn More</button>
       </div>
       <div className="hero-section_brands">
         <BrandItem brand={Databiz} />
