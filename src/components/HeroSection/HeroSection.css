@@ -36,22 +36,21 @@
 /* Desktop Rules */
 @media screen and (min-width: 540px) {
   .hero-section_container {
-    height: 45rem;
-    margin: auto 9rem;
+    height: 50rem;
+    margin: auto 8rem;
     flex-flow: column wrap;
   }
 
-  .hero-section_text,
+  .hero-section_text {
+    flex: 0 1 90%;
+  }
+
   .hero-section_brands {
-    flex: 0 1 50%;
+    flex: 0 1 10%;
   }
 
   .hero-section_image {
     flex: 1 0 100%;
     order: 3;
   }
-
-  
-
-
 }
