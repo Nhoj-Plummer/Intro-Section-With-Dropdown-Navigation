@@ -13,7 +13,7 @@
 .hero-section_text,
 .hero-section_text h1,
 .hero-section_text p,
-.hero-section_tex button {
+.hero-section_text button {
   border: 1px solid;
 }
 
@@ -95,6 +95,15 @@
 
   .hero-section_text {
     flex: 0 1 90%;
+  }
+
+  .hero-section_text h1{
+    width: 70%;
+    font-size: 80px;
+  }
+
+  .hero-section_text p {
+    width: 50%;
   }
 
   .hero-section_brands {

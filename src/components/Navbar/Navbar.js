@@ -43,7 +43,7 @@ const Menu = ({toggleSectionMenu, handleOpen, toggleSectionMenu2, handleOpen2}) 
       )}
     </p>
     {!toggleSectionMenu2 && (
-      <div className="navbar-feature-subsection">
+      <div className="navbar-feature-subsection-two">
         <a href="#history">History</a>
         <a href="#ourteam">Our Team</a>
         <a href="#blog">Blog</a>
