@@ -12,12 +12,10 @@ const BrandItem = ({brand}) => {
 
 const HeroSection = () => {
   return (
-    <div className="hero-section_container">
+    <div className="hero-section_container section-padding">
       <div className="hero-section_image">
-        <picture>
-          <source media="(min-width: 541px)" srcSet={DesktopImg} />
-          <img src={MobileImg} alt="img" />
-        </picture>
+        <source media="(min-width: 541px)" srcSet={DesktopImg} />
+        <img src={MobileImg} alt="img" />
       </div>
       <div className="hero-section_text">
         <h1>Make remote work</h1>
