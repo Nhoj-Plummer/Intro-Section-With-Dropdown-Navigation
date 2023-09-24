@@ -42,7 +42,9 @@
   color: var(--almost-white);
   border-radius: 15px;
   font-family: var(--font-family);
+  font-size: 15px;
   font-weight: 500;
+  border-style: none;
 }
 
 /* Conditional Section */
@@ -53,9 +55,33 @@
     text-align: center;
   }
 
-  .hero-section_text h1,
-  .hero-section_text p {
+  .hero-section_text h1 {
     margin-top: 1.5rem;
+  }
+
+  .hero-section_text p {
+    margin-top: 1rem;
+  }
+
+  .hero-section_text button {
+    margin-top: 1rem;
+  }
+
+  .hero-section_brands {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+
+  .hero-section_brands div {
+    flex: 1;
+  }
+
+  .hero-section_brands img {
+    width: 60%;
+    justify-content: center;
+    align-items: center;
   }
 }
 
