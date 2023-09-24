@@ -19,9 +19,26 @@
   border: 1px solid;
 }
 
+.navbar-container p {
+  width: 100px;
+  margin-right: 2rem;
+}
+
 .navbar-container a {
   text-decoration: none;
   color: var(--medium-gray);
+}
+
+.navbar-container p:nth-child(1),
+.navbar-container p:nth-child(2) {
+  background-image: url("../../assets/icon-arrow-up.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px;
+  border: 1px solid;
+}
+
+.navbar-container:hover a {
+  color: var(--almost-black);
 }
 
 .navbar-container a img {

@@ -7,11 +7,12 @@ const Menu = ({toggleSectionMenu, handleOpen, toggleSectionMenu2, handleOpen2}) 
     <p>
       {toggleSectionMenu ? (
         <a href="#features" onClick={handleOpen}>
-          Features <img src={ArrowDown} alt="off" />
+          Features
+          {/* <img src={ArrowDown} alt="off" /> */}
         </a>
       ) : (
         <a href="#features" onClick={handleOpen}>
-          Features <img src={ArrowUp} alt="on" />
+          Features {/*<img src={ArrowUp} alt="on" /> */}
         </a>
       )}
     </p>
@@ -34,11 +35,11 @@ const Menu = ({toggleSectionMenu, handleOpen, toggleSectionMenu2, handleOpen2}) 
     <p>
       {toggleSectionMenu2 ? (
         <a href="#company" onClick={handleOpen2}>
-          Company <img src={ArrowDown} alt="off" />
+          Company {/*<img src={ArrowDown} alt="off" /> */}
         </a>
       ) : (
         <a href="#company" onClick={handleOpen2}>
-          Company <img src={ArrowUp} alt="off" />
+          Company {/*<img src={ArrowUp} alt="off" /> */}
         </a>
       )}
     </p>
