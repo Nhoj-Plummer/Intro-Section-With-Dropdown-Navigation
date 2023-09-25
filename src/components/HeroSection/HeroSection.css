@@ -89,30 +89,29 @@
 @media screen and (min-width: 540px) {
   .hero-section_container {
     height: 50rem;
-    
-    align-items: center;
+
+    align-content: center;
     flex-flow: column wrap;
   }
 
-  .hero-section_text h1,
+  /* .hero-section_text h1,
   .hero-section_text p,
   .hero-section_text button {
     
-  }
+  } */
 
   .hero-section_text {
-    flex: 0 1 40%;
+    flex: 1;
   }
 
   .hero-section_text h1 {
-    width: 66%;
     font-size: 80px;
     margin-top: 12rem;
   }
 
   .hero-section_text p {
     font-size: 18px;
-   
+
     line-height: 1.75rem;
     margin-top: 4rem;
   }
@@ -135,7 +134,6 @@
     flex: 0 1 10%;
     justify-content: center;
     align-items: center;
-  
   }
 
   .hero-section_brands div {
@@ -143,7 +141,7 @@
   }
 
   .hero-section_image {
-   flex: 0 1 50%;
+    flex: 1;
     order: 3;
   }
 }
