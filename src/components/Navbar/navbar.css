@@ -12,11 +12,11 @@
 .navbar-container {
   display: flex;
   font-family: var(--font-family);
-  font-size: 18px;
+
   height: 4rem;
   padding: 20px;
   justify-content: space-between;
-  
+
   border: 1px solid;
 }
 
@@ -149,6 +149,10 @@
     display: none;
   }
 
+  .navbar-container {
+    margin: auto 4rem;
+  }
+
   .navbar-feature-subsection,
   .navbar-feature-subsection-two {
     position: fixed;
@@ -160,11 +164,11 @@
 
   .navbar-feature-subsection {
     top: 35px;
-    left: 90px;
+    left: 130px;
   }
 
   .navbar-feature-subsection-two {
     top: 35px;
-    left: 300px;
+    left: 330px;
   }
 }

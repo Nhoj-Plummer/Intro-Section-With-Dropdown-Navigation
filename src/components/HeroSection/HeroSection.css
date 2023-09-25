@@ -102,20 +102,32 @@
   .hero-section_text h1,
   .hero-section_text p,
   .hero-section_text button {
-    margin-left: 8rem;
+    margin-left: 4rem;
   }
 
   .hero-section_text h1 {
-    width: 70%;
-    font-size: 90px;
+    width: 66%;
+    font-size: 80px;
     margin-top: 12rem;
-    margin-left: 8rem;
   }
 
   .hero-section_text p {
     flex: 0 1 90%;
     font-size: 18px;
     width: 50%;
+    line-height: 1.75rem;
+    margin-top: 4rem;
+  }
+
+  .hero-section_text button {
+    margin-top: 4rem;
+    font-size: 18px;
+    width: 160px;
+    height: 60px;
+    cursor: pointer;
+  }
+
+  .hero-section_text button {
   }
 
   .hero-section_brands {
