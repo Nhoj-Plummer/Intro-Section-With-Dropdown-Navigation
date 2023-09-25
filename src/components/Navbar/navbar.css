@@ -16,6 +16,7 @@
   height: 4rem;
   padding: 20px;
   justify-content: space-between;
+  
   border: 1px solid;
 }
 
@@ -61,18 +62,32 @@
   display: flex;
   justify-content: space-between;
   margin-left: 3.125rem;
-  border: 1px solid;
 }
 
 .navbar-desktop-menu {
   flex: 0 1 60%;
   display: flex;
-  border: 1px solid;
 }
 
 .navbar-desktop-login {
-  flex: 0 1 20%;
-  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex: 0 1 10%;
+}
+
+.navbar-desktop-login a:hover {
+  color: var(--almost-black);
+}
+
+.navbar-desktop-login a:nth-child(2) {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  padding: 10px 0;
+  bottom: 11px;
+  border-radius: 15px;
+  border: 2px solid;
 }
 
 /* Mobile CSS */
@@ -145,11 +160,11 @@
 
   .navbar-feature-subsection {
     top: 35px;
-    left: 40px;
+    left: 90px;
   }
 
   .navbar-feature-subsection-two {
     top: 35px;
-    left: 250px;
+    left: 300px;
   }
 }

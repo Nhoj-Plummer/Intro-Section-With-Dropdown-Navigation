@@ -90,28 +90,41 @@
   .hero-section_container {
     height: 50rem;
     margin: auto 8rem;
+    align-items: center;
     flex-flow: column wrap;
   }
 
   .hero-section_text {
     flex: 0 1 90%;
+    width: 50%;
   }
 
-  .hero-section_text h1{
+  .hero-section_text h1,
+  .hero-section_text p,
+  .hero-section_text button {
+    margin-left: 8rem;
+  }
+
+  .hero-section_text h1 {
     width: 70%;
-    font-size: 80px;
+    font-size: 90px;
+    margin-top: 12rem;
+    margin-left: 8rem;
   }
 
   .hero-section_text p {
+    flex: 0 1 90%;
+    font-size: 18px;
     width: 50%;
   }
 
   .hero-section_brands {
     flex: 0 1 10%;
+    width: 50%;
   }
 
   .hero-section_image {
-    flex: 1 0 100%;
+    flex: 0 1 100%;
     order: 3;
   }
 }
