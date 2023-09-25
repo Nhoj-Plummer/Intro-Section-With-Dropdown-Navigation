@@ -149,9 +149,9 @@
     display: none;
   }
 
-  .navbar-container {
+  /* .navbar-container {
     margin: auto 4rem;
-  }
+  } */
 
   .navbar-feature-subsection,
   .navbar-feature-subsection-two {
@@ -164,11 +164,11 @@
 
   .navbar-feature-subsection {
     top: 35px;
-    left: 130px;
+    left: 60px;
   }
 
   .navbar-feature-subsection-two {
     top: 35px;
-    left: 330px;
+    left: 250px;
   }
 }

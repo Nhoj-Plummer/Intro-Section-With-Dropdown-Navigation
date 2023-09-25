@@ -89,20 +89,19 @@
 @media screen and (min-width: 540px) {
   .hero-section_container {
     height: 50rem;
-    margin: auto 8rem;
+    
     align-items: center;
     flex-flow: column wrap;
-  }
-
-  .hero-section_text {
-    flex: 0 1 90%;
-    width: 50%;
   }
 
   .hero-section_text h1,
   .hero-section_text p,
   .hero-section_text button {
-    margin-left: 4rem;
+    
+  }
+
+  .hero-section_text {
+    flex: 0 1 40%;
   }
 
   .hero-section_text h1 {
@@ -112,9 +111,8 @@
   }
 
   .hero-section_text p {
-    flex: 0 1 90%;
     font-size: 18px;
-    width: 50%;
+   
     line-height: 1.75rem;
     margin-top: 4rem;
   }
@@ -127,16 +125,25 @@
     cursor: pointer;
   }
 
-  .hero-section_text button {
+  .hero-section_text button:hover {
+    border: 1px solid;
+    background: var(--almost-white);
+    color: var(--almost-black);
   }
 
   .hero-section_brands {
     flex: 0 1 10%;
-    width: 50%;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+  .hero-section_brands div {
+    flex: 1;
   }
 
   .hero-section_image {
-    flex: 0 1 100%;
+   flex: 0 1 50%;
     order: 3;
   }
 }
