@@ -9,7 +9,8 @@
 }
 
 .hero-section_text p {
-  font-size: 17px;
+  font-size: 18px;
+  line-height: 1.75rem;
   color: var(--medium-gray);
   font-weight: 500;
 }
@@ -26,8 +27,8 @@
 }
 
 .hero-section_text button {
-  width: 130px;
-  height: 40px;
+  width: 160px;
+  height: 60px;
   background-color: var(--almost-black);
   color: var(--almost-white);
   border-radius: 15px;
@@ -105,8 +106,6 @@
   .hero-section_text button {
     margin-top: 4rem;
     font-size: 18px;
-    width: 160px;
-    height: 60px;
     cursor: pointer;
   }
 
