@@ -1,21 +1,16 @@
 .hero-section_container {
   display: flex;
   font-family: var(--font-family);
-  border: 1px solid;
+  
 }
 
 /* New lesson be sure to place the height for the img element to actually inherit the size */
 .hero-section_image {
   height: inherit;
-  border: 1px solid;
+  
 }
 
-.hero-section_text,
-.hero-section_text h1,
-.hero-section_text p,
-.hero-section_text button {
-  border: 1px solid;
-}
+
 
 .hero-section_text p {
   font-size: 17px;
@@ -25,7 +20,7 @@
 
 .hero-section_brands {
   display: flex;
-  border: 1px solid;
+  
 }
 
 .hero-section_image img {
@@ -88,30 +83,26 @@
 /* Desktop Rules */
 @media screen and (min-width: 540px) {
   .hero-section_container {
-    height: 50rem;
-
-    align-content: center;
+    height: 45rem;
     flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
   }
-
-  /* .hero-section_text h1,
-  .hero-section_text p,
-  .hero-section_text button {
-    
-  } */
 
   .hero-section_text {
     flex: 1;
+    width: 50%;
   }
 
   .hero-section_text h1 {
     font-size: 80px;
-    margin-top: 12rem;
+    width: 57%;
+    margin-top: 11.5rem;
   }
 
   .hero-section_text p {
     font-size: 18px;
-
+    width: 50%;
     line-height: 1.75rem;
     margin-top: 4rem;
   }
@@ -125,21 +116,26 @@
   }
 
   .hero-section_text button:hover {
-    border: 1px solid;
+    
     background: var(--almost-white);
     color: var(--almost-black);
   }
 
   .hero-section_brands {
     flex: 0 1 10%;
-    justify-content: center;
+    width: 40%;
     align-items: center;
   }
 
   .hero-section_brands div {
-    flex: 1;
+    margin-right: 50px;
+    
   }
 
+  .hero-section_brands img {
+    justify-content: center;
+    align-items: center;
+  }
   .hero-section_image {
     flex: 1;
     order: 3;
