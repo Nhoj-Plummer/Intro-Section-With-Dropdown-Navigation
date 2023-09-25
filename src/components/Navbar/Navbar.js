@@ -4,27 +4,17 @@ import {Logo, MenuIcon, MenuCloseIcon, ArrowUp, ArrowDown, TodoList, Calender, R
 
 const Menu = ({toggleSectionMenu, handleOpen, toggleSectionMenu2, handleOpen2}) => (
   <>
-    <p onClick={handleOpen}>
-      <a href="#features">Features</a>
-    </p>
-
-    <p onClick={handleOpen2}>
-      <a href="#company">Company</a>
-    </p>
-    {!toggleSectionMenu2 && (
-      <div className="navbar-feature-subsection-two">
-        <a href="#history">History</a>
-        <a href="#ourteam">Our Team</a>
-        <a href="#blog">Blog</a>
-      </div>
-    )}
     <p>
-      <a href="#careers">Careers</a>
+      {toggleSectionMenu ? (
+        <a href="#features" onClick={handleOpen}>
+          Features <img src={ArrowDown} alt="off" />
+        </a>
+      ) : (
+        <a href="#features" onClick={handleOpen}>
+          Features <img src={ArrowUp} alt="on" />
+        </a>
+      )}
     </p>
-    <p>
-      <a href="#about"> About</a>
-    </p>
-    {/* Placedthe Features subsection here to keep position absolute working clearly */}
     {!toggleSectionMenu && (
       <div className="navbar-feature-subsection">
         <a href="#todolist">
@@ -41,6 +31,30 @@ const Menu = ({toggleSectionMenu, handleOpen, toggleSectionMenu2, handleOpen2}) 
         </a>
       </div>
     )}
+    <p>
+      {toggleSectionMenu2 ? (
+        <a href="#company" onClick={handleOpen2}>
+          Company <img src={ArrowDown} alt="off" />
+        </a>
+      ) : (
+        <a href="#company" onClick={handleOpen2}>
+          Company <img src={ArrowUp} alt="off" />
+        </a>
+      )}
+    </p>
+    {!toggleSectionMenu2 && (
+      <div className="navbar-feature-subsection-two">
+        <a href="#history">History</a>
+        <a href="#ourteam">Our Team</a>
+        <a href="#blog">Blog</a>
+      </div>
+    )}
+    <p>
+      <a href="#careers">Careers</a>
+    </p>
+    <p>
+      <a href="#about"> About</a>
+    </p>
   </>
 )
 
